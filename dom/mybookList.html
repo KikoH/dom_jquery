@@ -1,0 +1,51 @@
+ <!DOCTYPE html>
+ <html>
+ <head>
+ 	<meta charset="utf-8"/>
+ 	<title>Books</title>
+ </head>
+ <body>
+ 	<h1>My book list</h1>
+
+ 	
+
+ 	<script type= "text/javascript">
+ 		var books = [
+ 		{	title: "The Lord of the Rings",
+ 		author: "J.R.R. Tolkien",
+ 		alreadyRead: false
+ 	}, {
+ 		title: "The Hobbit",
+ 		author: "J.R.R. Tolkien",
+ 		alreadyRead: true
+ 	}];
+
+ 	for (i = 0; i < books.length; i++) {
+ 		var book = books[i];
+ 		var ownedBooks = book.title + " by " + book.author;
+ 		if (book.alreadyRead === true) {
+ 			var ul = document.createElement('ul');
+ 			var li = document.createElement('li');
+
+ 			ul.appendChild(li);
+ 			li.innerText = "You already read " + ownedBooks;
+ 			document.body.appendChild(ul);
+ 			// var ptag = document.createElement('p');
+ 			// ptag.innerText = "You already read " + ownedBooks;
+ 			// document.body.appendChild(ptag);
+ 		} else if (book.alreadyRead === false) {
+ 			var ul = document.createElement('ul');
+ 			var li = document.createElement('li');
+
+ 			ul.appendChild(li);
+ 			li.innerText = "You still need to read " + ownedBooks;
+ 			document.body.appendChild(ul);
+
+ 			// document.write("You still need to read " + ownedBooks);
+ 		}
+ 	}
+ </script>
+
+
+</body>
+</html>

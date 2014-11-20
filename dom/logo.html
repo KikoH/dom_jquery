@@ -1,0 +1,23 @@
+// Exercises: The DOM
+
+// EXERCISE: The Logo Hijack
+
+// No homepage is safe from the logo bandit!
+
+// Open up www.google.com in Chrome or Firefox, and open up the console.
+// Find the Google logo and store it in a variable.
+// Modify the source of the logo IMG so that it's a Yahoo logo instead.
+// Find the Google search button and store it in a variable.
+// Modify the text of the button so that it says "Yahooo!" instead.
+<script>
+
+// changing logo
+var logo = document.getElementById('hplogo');
+var img = logo.getElementByTagName('img')[0];
+img.src = "https://encrypted-tbn1.gstatic.com/images?q=tbn:ANd9GcTE51fXda0qW_1-kYc5d0saWmatDCA-E_CYd81o6YCMo0IuoMWY2Iga-Zg0"
+
+// changing text in google search
+var search = document.getElementById('gbqfsa');
+search.innerText = "Yahoo!";
+
+</script>

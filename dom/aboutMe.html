@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8"/>
+	<title>About Me</title>
+</head>
+<body>
+	<h1>About Me</h1>
+
+	<ul>
+		<li>Nickname: <span id="nickname"></span>
+			<li>Favorites:  <span id="favorites"></span>
+				<li>Hometown: <span id="hometown"></span>
+				</ul>
+				<script type= "text/javascript">
+					document.body.style.fontFamily = "Arial, sans-serif";
+
+					var nickname = document.getElementById('nickname');
+					nickname.innerText = 'Kiko';
+					var favorites = document.getElementById('favorites');
+					favorites.innerText = 'Football';
+					var hometown = document.getElementById('hometown');
+					hometown.innerText = 'Cairo';
+
+					document.getElementById("favorites").className = "listitem";
+					document.getElementById("hometown").className = "listitem";
+					document.getElementById("nickname").className = "listitem";
+
+					red = document.getElementsByClassName('listitem');
+					for(i=0; i<red.length; i++) {
+						red[i].style.backgroundColor = 'red';
+					}
+
+					var img = document.createElement('img');
+					img.src = "https://encrypted-tbn1.gstatic.com/images?q=tbn:ANd9GcTE51fXda0qW_1-kYc5d0saWmatDCA-E_CYd81o6YCMo0IuoMWY2Iga-Zg0";
+					document.body.appendChild(img);
+				</script>
+			</body>
+			</html>
